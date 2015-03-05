@@ -1,0 +1,696 @@
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url('fonts/segoeuil.eot');
+    src: url('fonts/segoeuil.woff') format('woff'), url('fonts/segoeuil.ttf') format('truetype'), url('fonts/segoeuil.otf') format('opentype'), url('fonts/segoeuil.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    src: url('fonts/segoeui.eot');
+    src: url('fonts/segoeui.woff') format('woff'), url('fonts/segoeui.ttf') format('truetype'), url('fonts/segoeui.otf') format('opentype'), url('fonts/segoeui.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    src: url('fonts/segoeuib.eot');
+    src: url('fonts/segoeuib.woff') format('woff'), url('fonts/segoeuib.ttf') format('truetype'), url('fonts/segoeuib.otf') format('opentype'), url('fonts/segoeuib.svg') format('svg');
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI Regular';
+    background-color: #ff7e7e;
+}
+
+.wrapper {
+    min-height: 100%;
+    background-image: url('img/background.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
+    height: 100px;
+}
+
+.center {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content {
+    background-color: #fff;
+}
+
+.bigtitle {
+    text-align: center;
+    padding: 20px 50px;
+    font-family: 'Segoe UI Light';
+}
+
+.bigtitle span {
+    display: inline-block;
+    font-size: 60px;
+    color: #ec6c6a;
+    transform: rotate(-6deg) ;
+    -webkit-transform: rotate(-4deg) ;
+    -moz-transform: rotate(-4deg) ;
+    -o-transform: rotate(-4deg) ;
+    -ms-transform: rotate(-4deg) ;
+    text-shadow: 5px 5px 1px #ececec;
+}
+
+.socials {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 172px;
+}
+
+.socials li {
+    float: left;
+    margin-right: 4px;
+}
+
+.socials li:last-child {
+    margin-right: 0;
+}
+
+.socials a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/socials.png');
+    background-size: 160px 40px;
+}
+
+.socials a.vk{
+    background-position: 0 0;
+}
+
+.socials a.tw {
+    background-position: -40px 0;
+}
+
+.socials a.fb{
+    background-position: -80px 0;
+}
+
+.socials a.gp {
+    background-position: -120px 0;
+}
+
+header {
+    font-family: 'Segoe UI Light';
+    background-color: #ff7e7e;
+    padding-top: 10px;
+}
+
+header .logo {
+    position: absolute;
+}
+
+header .logo img {
+    width: 163px;
+    height: 75px;
+}
+
+header .menu1 {
+    padding-top: 18px;
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+header .menu1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu1 ul li {
+    float: left;
+}
+
+header .menu1 ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #070707;
+    text-decoration: none;
+}
+
+header .menu1 a:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+
+header .socials {
+    margin: -45px 0 0 0;
+}
+
+header .menu2 {
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 6px;
+}
+
+header .menu2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+header .menu2 ul li {
+    float: left;
+    margin-right: 27px;
+}
+
+header .menu2 ul li:last-child {
+    margin-right: 0;
+}
+
+header .menu2 ul li a {
+    display: block;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+header .menu2 ul li a span {
+    font-size: 24px;
+    color: #080808;
+    position: relative;
+    z-index: 1;
+}
+
+header .menu2 ul li a span:before {
+    content: attr(data-before);
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    font-size: 70px;
+    color: #f1eeee;
+    z-index: -1;
+    line-height: 70px;
+}
+
+header .menu2 ul li a:hover span:before {
+    color: #ffce54;
+}
+
+header .menu2 ul li ul {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+header .menu2 ul li:hover ul {
+    display: block;
+}
+
+header .menu2 ul li ul li {
+    float: none;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 5px 0;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.5);
+}
+
+header .menu2 ul li ul li:first-child {
+    margin-top: 11px;
+}
+
+header .menu2 ul li ul li a {
+    font-size: 18px;
+    color: #080808;
+    padding: 0 30px;
+}
+
+header .menu2 ul li ul li a:hover {
+    text-decoration: underline;
+}
+
+footer:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 650px;
+    background-color: transparent;
+    background-image: -moz-linear-gradient(90deg, transparent 0%, #ffce54 100%);
+    background-image: -webkit-linear-gradient(90deg, transparent 0%, #ffce54 100%);
+    background-image: -o-linear-gradient(90deg, transparent 0%, #ffce54 100%);
+    background-image: -ms-linear-gradient(90deg, transparent 0%, #ffce54 100%);
+    background-image: linear-gradient(180deg, transparent 0%, #ffce54 100%);
+    z-index: -1;
+}
+
+footer {
+    height: 100px;
+    position: relative;
+    margin-top: -100px;
+}
+
+footer > div {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+footer .left {
+    padding: 20px 0px 0 10px;
+}
+
+footer .right {
+    padding: 30px 10px 0 0;
+}
+
+footer .logo {
+    float: left;
+    margin-right: 12px;
+}
+
+footer .logo img {
+    width: 128px;
+    height: 60px;
+}
+
+footer p {
+    float:left;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+}
+
+footer span {
+    display: block;
+    font-family: 'Segoe UI Light';
+    font-size: 18px;
+    color: #ec6c6a;
+}
+
+footer .right span {
+    float: left;
+    font-size: 30px;
+    margin-right: 12px;
+}
+
+footer .socials {
+    padding: 0;
+}
+
+.homeSlider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.homeSlider .images {
+    list-style: none;
+    position: relative;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.homeSlider.motion .images {
+    -webkit-transition-property: left;
+    -moz-transition-property: left;
+    -o-transition-property: left;
+    transition-property: left;
+
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.homeSlider .images li {
+    float: left;
+    margin-bottom: -4px;
+}
+
+.homeSlider .images li img {
+    width: 100%;
+}
+
+.homeSlider .pagination {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.homeSlider .pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.homeSlider .pagination ul li {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    background-color: #fff;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.3);
+}
+
+.homeSlider .pagination ul li:last-child {
+    margin-right: 0;
+}
+
+.homeSlider .pagination ul li.active {
+    background-color: #ec6c6a;
+}
+
+.homeSlider .pagination ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+}
+
+.homeSlider .pagination ul li.active a {
+    cursor: default;
+}
+
+.home .row {
+    padding-top: 10px;
+}
+
+.home .left {
+    width: 500px;
+    margin: 0 8px;
+}
+
+.home .right {
+    width: 435px;
+    margin: 0 8px;
+}
+
+.home .gray {
+    background-color: #eee;
+    margin-top: -30px;
+    padding-top: 40px;
+    padding-bottom: 12px;
+}
+
+.home .bigtitle.video, .home .bigtitle.photo {
+    position: relative;
+    text-align: left;
+}
+
+.home .bigtitle.video:before {
+    content: "";
+    position: absolute;
+    background-image: url('img/vidos-title.png');
+    background-repeat: no-repeat;
+    width: 116px;
+    height: 107px;
+    left: -6px;
+    top: 15px;
+}
+
+.home .bigtitle.photo:before {
+    content: "";
+    position: absolute;
+    background-image: url('img/photos-title.png');
+    background-repeat: no-repeat;
+    width: 116px;
+    height: 107px;
+    left: -6px;
+    top: 30px;
+}
+
+.home a.video {
+    float: left;
+    position: relative;
+    color: #fff;
+    width: 247px;
+    height: 141px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.home a.video:nth-child(odd) {
+    margin-right: 6px;
+}
+
+.home a.video:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('img/vidos-play-72x72.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 72px;
+    background-color: transparent;
+    opacity: 0.65;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.home a.video:hover:after {
+    opacity: 1;
+    background-position-x: center;
+    background-position-y: 40px;
+    background-size: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home a.video.big {
+    display: block;
+    width: 500px;
+    height: 287px;
+}
+
+.home a.video.big:after {
+    background-size: 94px;
+}
+
+.home a.video.big:hover:after {
+    background-position: center;
+}
+
+.home a.photo {
+    float: left;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    width: 141px;
+    height: 141px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+
+.home a.photo:nth-of-type(3n - 2) {
+    margin-left: 0;
+}
+
+.home a.photo:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('img/photos-show.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 72px;
+    background-color: transparent;
+    opacity: 0;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.home a.photo:hover:after {
+    opacity: 1;
+    background-position-x: center;
+    background-position-y: 40px;
+    background-size: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home a.photo.big {
+    width: 288px;
+    height: 288px;
+}
+
+.home a.photo.big:after {
+    background-size: 94px;
+}
+
+.home a.photo.big:hover:after {
+    background-position: center;
+}
+
+.home a.video img, .home a.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.home a.video p, .home a.photo p {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    margin: 0;
+    padding: 18px 0px;
+    text-align: center;
+    text-decoration: underline;
+    z-index: 1;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.home a.video:hover p, .home a.photo:hover p {
+    bottom: 10px;
+}
+
+.home a.big p {
+    padding: 18px 14px;
+    text-align: left;
+    text-decoration: none;
+    bottom: 0px;
+}
+
+.home a.big:hover p {
+    bottom: 0px;
+}
+
+.home a.big p span {
+    display: block;
+}
+
+.home a.big p span.new {
+    display: inline-block;
+    padding: 0 5px 1px;
+    background-color: #f6ff00;
+    color: #000;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+.home a.big p span.title {
+    font-size: 14px;
+}
+
+.home a.big p span.date {
+    font-size: 11px;
+}
+
+.home a.all {
+    float: left;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    padding-top: 8px;
+}
+
+.home a.all:hover {
+    text-decoration: underline;
+}
+
+.home a.share {
+    float: right;
+    width: 170px;
+    height: 32px;
+    font-size: 14px;
+    color: #070707;
+    background-image: url('img/a-share-back.png');
+    background-size: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.home a.share:hover {
+    text-decoration: underline;
+}
+
+.home .projects {
+    padding: 20px 8px;
+}
+
+.home a.project {
+    float: left;
+    padding-top: 100px;
+    width: 135px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Segoe UI Light";
+    font-size: 14px;
+    text-decoration: none;
+    color: #d64543;
+    background-position-x: center;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    margin-right: 10px;
+
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.home a.project:nth-child(7n) {
+    margin-right: 0;
+}
+
+.home a.project:hover {
+    text-decoration: underline;
+    background-size: 60%;
+}
+
+.home article {
+    padding: 20px;
+    font-size: 12px;
+    color: #797979;
+}
+
+
