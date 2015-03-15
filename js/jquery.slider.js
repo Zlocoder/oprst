@@ -42,7 +42,7 @@
         $('.images', $this).css('width', 100 * $('.images li', $this).length + '%')
         $('.images li', $this).css('width', 100 / $('.images li', $this).length + '%');
 
-        interval = setInterval(_move, msInterval);
+        //interval = setInterval(_move, msInterval);
 
         $('.pagination ul li', $this).click(function() {
             if (!$(this).hasClass('active')) {
